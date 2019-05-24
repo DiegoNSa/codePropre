@@ -5,16 +5,51 @@ package ex3;
  */
 public class Zoo {
 
+	/**
+	 * nom du zoo
+	 */
 	private String nom;
+	
+	/**
+	 * Zone du zoo ou sont placé les animaux de savane 
+	 */
 	private SavaneAfricaine savaneAfricaine;
+	/**
+	 * Zone du zoo ou sont placé les animaux carnivore 
+	 */
 	private ZoneCarnivore zoneCarnivore;
+	/**
+	 * Zone du zoo ou sont placé les reptiles 
+	 */
 	private FermeReptile fermeReptile;
+	/**
+	 * Zone du zoo ou sont placé les animaux vivants en aquarium 
+	 */
 	private Aquarium aquarium;
 	
+	/** Contructeur pour la classe Zoo
+	 * 
+	 * @param nom : nom donné au zoo
+	 */
 	public Zoo(String nom){
 		this.nom = nom;
+		savaneAfricaine = new SavaneAfricaine();
+		zoneCarnivore = new ZoneCarnivore();
+		fermeReptile = new FermeReptile();
+		aquarium = new Aquarium();
+
 	}
 	
+	/** Ajoute un animal dans l'une des zones du zoo selon son type et son comportement allimentaire
+	 * <p> un mammifere carnivore sera placé dans la zone carnivore ZoneCarnivore
+	 * <p> un mammifere herbivore sera placé dans la zone savane SavaneAfricaine
+	 * <p> un reptile sera placé dans la ferme de reptile FermeReptile
+	 * <p> un poisson sera placé dans la zone aquarium Aquarium
+	 * 
+	 * @param nomAnimal
+	 * @param typeAnimal
+	 * @param comportement
+	 */
 	public void addAnimal(String nomAnimal, String typeAnimal, String comportement){
 		if (typeAnimal.equals("MAMMIFERE") && comportement.equals("CARNIVORE")){
 			zoneCarnivore.addAnimal(typeAnimal, nomAnimal, comportement);
@@ -30,6 +65,9 @@ public class Zoo {
 		}
 	}
 	
+	/**
+	 * Affiche la liste de tous les animaux du zoo
+	 */
 	public void afficherListeAnimaux(){
 		savaneAfricaine.afficherListeAnimaux();
 		zoneCarnivore.afficherListeAnimaux();
