@@ -18,6 +18,11 @@ public class Zoo {
 	 * Zone du zoo ou sont placé les animaux carnivore 
 	 */
 	private ZoneCarnivore zoneCarnivore;
+	public SavaneAfricaine getSavaneAfricaine() {
+		return savaneAfricaine;
+	}
+
+
 	/**
 	 * Zone du zoo ou sont placé les reptiles 
 	 */
@@ -87,5 +92,34 @@ public class Zoo {
 	 */
 	public void setNom(String nom) {
 		this.nom = nom;
+	}
+	
+
+	public void setSavaneAfricaine(SavaneAfricaine savaneAfricaine) {
+		this.savaneAfricaine = savaneAfricaine;
+	}
+
+	public ZoneCarnivore getZoneCarnivore() {
+		return zoneCarnivore;
+	}
+
+	public void setZoneCarnivore(ZoneCarnivore zoneCarnivore) {
+		this.zoneCarnivore = zoneCarnivore;
+	}
+
+	public FermeReptile getFermeReptile() {
+		return fermeReptile;
+	}
+
+	public void setFermeReptile(FermeReptile fermeReptile) {
+		this.fermeReptile = fermeReptile;
+	}
+
+	public Aquarium getAquarium() {
+		return aquarium;
+	}
+
+	public void setAquarium(Aquarium aquarium) {
+		this.aquarium = aquarium;
 	}
 }
